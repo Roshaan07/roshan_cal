@@ -8,4 +8,4 @@ RUN mvn clean package
 FROM tomcat:9
 RUN mv webapps webapps2
 RUN cp -r webapps.dist/ webapps
-COPY --from=build /java/target/WebAppCal-0.0.8.war /usr/local/tomcat/webapps/
+COPY --from=build /cal/target/WebAppCal-0.0.8.war /usr/local/tomcat/webapps/
