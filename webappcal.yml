@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: webappcal
+  name: webappcal
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webappcal
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: webappcal
+    spec:
+      containers:
+      - image: roshan07/webappcal
+        name: webappcal
+
