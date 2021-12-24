@@ -1,4 +1,4 @@
-FROM maven as build
+FROM maven:3.8-openjdk-8-slim as build
 RUN mkdir /cal
 WORKDIR /cal
 COPY . .
